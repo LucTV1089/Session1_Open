@@ -12,10 +12,11 @@ public class Main {
 
         //Bai 2
 //        System.out.println("Input USD want to transfer : ");
-//        float vnd = scanner.nextFloat();
+//        float vnd = Float.parseFloat(scanner.nextLine());// nên dùng kiểu này
+//        // nên coi dữ liệu đầu vào là kiểu chuỗi và sẽ convert
 //        float usd;
 //        usd = vnd * 25000;
-//        System.out.println("From USD to VND is : "+ usd);\
+//        System.out.println("From USD to VND is : "+ usd);
         //Bai3
 //        System.out.println("Input a side of square : ");
 //        int side = scanner.nextInt();
@@ -33,12 +34,27 @@ public class Main {
 //        avg = (math + english + literature) /3;
 //        System.out.println("Average Mark of 3 Objects : " + avg);
         //Bai 5
-        System.out.println("Input radius of circle : ");
-        int radius = scanner.nextInt();
-        float perimeter,area;
-        perimeter = (float) (radius *2 *3.14);
-        area = (float) (3.14 * radius * radius);
-        System.out.println("Perimeter is : " + perimeter);
-        System.out.println("Area is : " + area);
+//        System.out.println("Input radius of circle : ");
+//        int radius = scanner.nextInt();
+//        float perimeter,area;
+//        perimeter = (float) (radius *2 *3.14);
+//        area = (float) (3.14 * radius * radius);
+//        System.out.println("Perimeter is : " + perimeter);
+//        System.out.println("Area is : " + area);
+
+        float ticketFee =7000F;
+        System.out.println("Input your age to calculate ticket fee ");
+        float age = Float.parseFloat(String.valueOf(scanner.nextFloat()));
+        if(age < 6 || age >60)
+        {
+            ticketFee = ticketFee - ticketFee;
+            System.out.println("Your ticket fee is : " + ticketFee);
+        } else if (age >= 6 && age <= 18)
+        {
+            System.out.println("Your ticket fee is : " +ticketFee/2);
+        } else {
+            System.out.println("Your ticket fee is : " +ticketFee);
+        }
+
     }
 }
